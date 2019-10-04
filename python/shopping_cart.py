@@ -47,7 +47,7 @@ class ShoppingCart:
                 if offer.offer_type == SpecialOfferType.FIVE_FOR_AMOUNT:
                     x = 5
 
-                number_of_x = quantity_as_int / x
+                number_of_x = quantity_as_int // x
                 if offer.offer_type == SpecialOfferType.THREE_FOR_TWO and quantity_as_int > 2:
                     discount_amount = quantity * unit_price - (
                                 (number_of_x * 2 * unit_price) + quantity_as_int % 3 * unit_price)
